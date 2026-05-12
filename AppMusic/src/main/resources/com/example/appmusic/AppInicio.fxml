@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appmusic.controllers.AppInicio">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="574.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="418.0">
+         <fill>
+            <RadialGradient centerX="0.5027624309392266" centerY="0.38625592417061605" focusAngle="-63.43" focusDistance="0.06896551724137923" radius="0.4080459770114942">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4868420958518982" green="0.28849902749061584" blue="0.45378491282463074" opacity="0.5199999809265137" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.8055555820465088" blue="0.9675925970077515" opacity="0.09000000357627869" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+      <Button layoutX="72.0" layoutY="456.0" mnemonicParsing="false" onAction="#onBackButton" prefHeight="45.0" prefWidth="39.0" style="-fx-background-radius: 100;" />
+      <Button layoutX="190.0" layoutY="456.0" mnemonicParsing="false" onAction="#onPlayButton" prefHeight="45.0" prefWidth="39.0" style="-fx-background-radius: 100;" />
+      <Button layoutX="309.0" layoutY="456.0" mnemonicParsing="false" onAction="#onNextButton" prefHeight="45.0" prefWidth="39.0" style="-fx-background-radius: 100;" />
+      <Slider layoutX="64.0" layoutY="369.0" prefHeight="55.0" prefWidth="283.0" />
+   </children>
+</AnchorPane>

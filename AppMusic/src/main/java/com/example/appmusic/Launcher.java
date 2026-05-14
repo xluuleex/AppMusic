@@ -1,6 +1,5 @@
 package com.example.appmusic;
 
-import com.example.appmusic.controllers.HelloApplication;
 import javafx.application.Application;
 
 public class Launcher {

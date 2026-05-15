@@ -1,6 +1,5 @@
 package com.example.appmusic.controllers;
 
-public class Canciones {
     public class Cancion {
 
         private String nombre;
@@ -28,4 +27,4 @@ public class Canciones {
             return duracion;
         }
     }
-}
+

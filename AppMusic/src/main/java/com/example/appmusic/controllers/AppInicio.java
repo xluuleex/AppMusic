@@ -1,5 +1,7 @@
 package com.example.appmusic.controllers;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,13 +34,13 @@ public class AppInicio implements Initializable {
     @FXML
     public Button volumen;
     @FXML
-    private TableView<Canciones.Cancion> tablaCanciones;
+    private TableView tablaCanciones;
     @FXML
-    private TableColumn<Canciones.Cancion, String> colNombre;
+    private TableColumn cancion;
     @FXML
-    private TableColumn<Canciones.Cancion, String> colArtista;
+    private TableColumn artista;
     @FXML
-    private TableColumn<Canciones.Cancion, String> colDuracion;
+    private TableColumn duracion;
 
 
     private File file = new File("musica/Seoul City.mp3");
@@ -53,15 +55,37 @@ public class AppInicio implements Initializable {
         cargarUI();
         cargarSliderVolumen();
         cargarCanciones();
+        cargarLista();
     }
     private void cargarCanciones(){
-        colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        cancion.setCellValueFactory(new PropertyValueFactory<>("nombre"));
 
-        colArtista.setCellValueFactory(new PropertyValueFactory<>("artista"));
+        artista.setCellValueFactory(new PropertyValueFactory<>("artista"));
 
-        colDuracion.setCellValueFactory(new PropertyValueFactory<>("duracion"));
+        duracion.setCellValueFactory(new PropertyValueFactory<>("duracion"));
 
     }
+    private void cargarLista(){
+        ObservableList<Cancion> canciones =
+                FXCollections.observableArrayList();
+
+        canciones.add(
+                new Cancion(
+                        "Seoul City",
+                        "Jennie",
+                        "02:42"
+                )
+        );
+        canciones.add(
+                new Cancion(
+                        "West Coast",
+                        "Lana del Rey",
+                        "04:15"
+                )
+        );
+        tablaCanciones.setItems(canciones);
+    }
+
     private void cargarSliderVolumen() {
         sliderVolumen.setMin(0.0);
         sliderVolumen.setMax(1.0);

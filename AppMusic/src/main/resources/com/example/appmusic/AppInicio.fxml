@@ -37,11 +37,11 @@
       <Button fx:id="btnNext" layoutX="258.0" layoutY="457.0" mnemonicParsing="false" onAction="#onNextButton" opacity="0.49" prefHeight="38.0" prefWidth="39.0" style="-fx-background-radius: 90;" />
       <Slider fx:id="sliderTiempo" layoutX="63.0" layoutY="397.0" prefHeight="38.0" prefWidth="287.0" />
       <Slider fx:id="sliderVolumen" layoutX="372.0" layoutY="314.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="13.0" />
-      <TableView fx:id="tableView" layoutX="99.0" layoutY="165.0" prefHeight="159.0" prefWidth="223.0" style="-fx-background-color: #F3E5F5;">
+      <TableView fx:id="tablaCanciones" layoutX="99.0" layoutY="87.0" prefHeight="127.0" prefWidth="223.0" style="-fx-background-color: #F3E5F5;">
         <columns>
-          <TableColumn fx:id="Cancion" prefWidth="75.0" style="-fx-background-color:: #F3E5F5;" text="Canción" />
-          <TableColumn prefWidth="75.0" text="Artista" />
-            <TableColumn prefWidth="75.0" text="Duración" />
+          <TableColumn fx:id="cancion" prefWidth="75.0" style="-fx-background-color:: #F3E5F5;" text="Canción" />
+          <TableColumn fx:id="artista" prefWidth="75.0" text="Artista" />
+            <TableColumn fx:id="duracion" prefWidth="75.0" text="Duración" />
         </columns>
       </TableView>
    </children>
